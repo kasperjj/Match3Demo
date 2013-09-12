@@ -7,7 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="#000000">
+        <Viewbox>
+            <Canvas x:Name="gameCanvas" Height="768" Width="1366" PointerMoved="PointerMoved" PointerPressed="PointerPressed" PointerReleased="PointerReleased" IsDoubleTapEnabled="False">
+                <TextBlock x:Name="frameRate" Margin="50,50" />
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Page>
