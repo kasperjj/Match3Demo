@@ -165,32 +165,6 @@ namespace Match3
                 board[x, y].mark = true; board[x, y - 1].mark = true; board[x, y + 1].mark = true; return;
             }
             // This will catch the two other options like the previous
-
-            // X.
-            // OX
-            if (GetColor(x, y - 1) == c && GetColor(x + 1, y) == c)
-            {
-                board[x, y].mark = true; board[x, y - 1].mark = true; board[x + 1, y].mark = true; return;
-            }
-            // .X
-            // XO
-            if (GetColor(x, y - 1) == c && GetColor(x - 1, y) == c)
-            {
-                board[x, y].mark = true; board[x, y - 1].mark = true; board[x - 1, y].mark = true; return;
-            }
-            // OX
-            // X.
-            if (GetColor(x, y + 1) == c && GetColor(x + 1, y) == c)
-            {
-                board[x, y].mark = true; board[x, y + 1].mark = true; board[x + 1, y].mark = true; return;
-            }
-            // XO
-            // .X
-            if (GetColor(x, y + 1) == c && GetColor(x - 1, y) == c)
-            {
-                board[x, y].mark = true; board[x, y + 1].mark = true; board[x - 1, y].mark = true; return;
-            }
-
         }
 
         private int CheckMatches(bool checkSwap)
